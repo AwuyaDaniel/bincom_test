@@ -54,7 +54,7 @@ with open(file_name, 'r') as chosen_colors:
             if k > mean:
                 if k % 2 == 0:
                     if k % 3 == 0:
-                        print(i)
+                        print('The mean color is ', i)
 
 
     """Question 2"""
@@ -63,7 +63,7 @@ with open(file_name, 'r') as chosen_colors:
         for i, k in colors.items():
             most = max(color_num)
             if k == most:
-                print(i)
+                print("the color most worn is ", i)
 
     """Question 3"""
     # Getting the median with numpy
@@ -73,7 +73,7 @@ with open(file_name, 'r') as chosen_colors:
         # matching the median and printing it out
         for i, k in colors.items():
             if k == median2:
-                print(i)
+                print("The median color is ", i)
 
     """Question 4"""
     def vari():
@@ -160,4 +160,6 @@ def fib(n):
         print(a + b)
 
 
-probability()
+vari()
+mean_numbers()
+most_worn()
