@@ -82,6 +82,18 @@ with open(file_name, 'r') as chosen_colors:
         print(p)
 
     """Question 5"""
+    def probability():
+        pro = sum(color_num)
+        # calculating the probability for only red
+        for i, k in colors.items():
+            percent = k / pro
+            if i == 'RED':
+                print(i, percent)
+        # calculating the probability for all colors
+        # for i, k in colors.items():
+        #     percent = k / pro
+        #     prcent = k / pro
+        #     print(i, percent)
 
     """Question 6"""
     def save_colors():
@@ -94,57 +106,58 @@ with open(file_name, 'r') as chosen_colors:
         print("Information has been added\n")
         connection.commit()
 
-    """Question 7"""
-    def recursive():
-        try:
-            numbers = [1, 5, 6, 9, 8, 7, 0]
-            number = input("Please enter a number: ")
-            number = int(number)
-            if number in numbers:
-                print(str(number) + " is in list of numbers")
-            else:
-                print(str(number) + " is not in list of numbers")
-        except ValueError:
-            print("Not an Integer")
 
-
-    """Question 8"""
-    def random_numbers():
-        numbers = []
-        # printing a list of 4 random numbers
-        num = list(map(random.randrange, [2]*4))
-        # converting dem to a string and adding dem to a new list
-        p = str(num)
-        for i in num:
-            numbers.append(str(i))
-
-        # joining the str in the new list together and printing it in decimal(base 10)
-        s = ''.join(numbers)
-        r = '0b' + s
-        dec = int(r, 0)
-        print(dec)
-
-
-    """Question 9"""
-    def fib(n):
-        a = 0
-        b = 1
-
-        # checking if range is 1 or not
-        if n == 1:
-            print(a)
+"""Question 7"""
+def recursive():
+    try:
+        numbers = [1, 5, 6, 9, 8, 7, 0]
+        number = input("Please enter a number: ")
+        number = int(number)
+        if number in numbers:
+            print(str(number) + " is in list of numbers")
         else:
-            print(a)
-            print(b)
-
-        # if range is more than two
-        for i in range(2, n):
-            # adding the first two values and then swapping it
-            # and adding the new one to the previous(formal) new one
-            c = a + b
-            a = b
-            b = c
-            print(a + b)
+            print(str(number) + " is not in list of numbers")
+    except ValueError:
+        print("Not an Integer")
 
 
-mean_numbers()
+"""Question 8"""
+def random_numbers():
+    numbers = []
+    # printing a list of 4 random numbers
+    num = list(map(random.randrange, [2]*4))
+    # converting dem to a string and adding dem to a new list
+    p = str(num)
+    for i in num:
+        numbers.append(str(i))
+
+    # joining the str in the new list together and printing it in decimal(base 10)
+    s = ''.join(numbers)
+    r = '0b' + s
+    dec = int(r, 0)
+    print(dec)
+
+
+"""Question 9"""
+def fib(n):
+    a = 0
+    b = 1
+
+    # checking if range is 1 or not
+    if n == 1:
+        print(a)
+    else:
+        print(a)
+        print(b)
+
+    # if range is more than two
+    for i in range(2, n):
+        # adding the first two values and then swapping it
+        # and adding the new one to the previous(formal) new one
+        c = a + b
+        a = b
+        b = c
+        print(a + b)
+
+
+probability()
