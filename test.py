@@ -159,7 +159,3 @@ def fib(n):
         b = c
         print(a + b)
 
-
-vari()
-mean_numbers()
-most_worn()
